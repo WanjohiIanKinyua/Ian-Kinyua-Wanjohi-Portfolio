@@ -39,41 +39,22 @@ h6,
 }
 
 .hero-glow {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(55px);
-  z-index: 0;
-  pointer-events: none;
+  display: none;
 }
 
-.hero-glow--one {
-  width: 280px;
-  height: 280px;
-  background: rgba(249, 115, 22, 0.25);
-  top: -60px;
-  right: 10%;
-}
-
-.hero-glow--two {
-  width: 220px;
-  height: 220px;
-  background: rgba(14, 165, 233, 0.25);
-  bottom: 5%;
-  left: 3%;
+.main-header {
+  min-height: 480px;
 }
 
 .main-header:before {
-  background:
-    radial-gradient(circle at 12% 18%, rgba(14, 165, 233, 0.22), transparent 38%),
-    radial-gradient(circle at 88% 15%, rgba(249, 115, 22, 0.22), transparent 34%),
-    linear-gradient(120deg, rgba(7, 14, 31, 0.94), rgba(10, 24, 48, 0.9));
+  background: linear-gradient(54deg, rgba(74, 76, 179, 0.95) 34%, rgba(202, 143, 154, 0.92));
 }
 
 .main-header:after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(2, 6, 23, 0.1), rgba(2, 6, 23, 0.28));
+  background: transparent;
   z-index: 0;
   pointer-events: none;
 }
@@ -84,58 +65,77 @@ h6,
 }
 
 .personal-profile .personal-profile__content {
-  background: rgba(15, 23, 42, 0.26);
-  border: 1px solid rgba(148, 163, 184, 0.22);
-  border-radius: 18px;
-  padding: 24px 26px;
-  backdrop-filter: blur(3px);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 40px 0 0 24px;
+  backdrop-filter: none;
 }
 
 .personal-profile .personal-profile__name {
-  font-size: clamp(2.1rem, 4vw, 3.6rem);
+  font-family: "Roboto Mono", monospace;
+  font-size: clamp(3.1rem, 5vw, 4.2rem);
   line-height: 1.05;
-  color: #fff;
-  text-shadow: 0 2px 18px rgba(2, 6, 23, 0.45);
+  color: #ffffff;
+  letter-spacing: 0;
+  text-shadow: none;
+  margin-top: 38px;
+  margin-bottom: 12px;
 }
 
 .personal-profile .personal-profile__work {
-  color: #e2e8f0;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-family: "Roboto Mono", monospace;
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-bottom: 28px;
 }
 
 .hero__lead {
-  max-width: 600px;
-  color: #e2e8f0;
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.92);
   margin-bottom: 24px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 15px;
+  line-height: 1.65;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 14px;
+  margin-top: 10px;
   margin-bottom: 16px;
 }
 
 .site-btn {
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--brand), #fb923c);
-  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.28);
+  border-radius: 26px;
+  background: #6d56c1;
+  box-shadow: none;
 }
 
 .site-btn:hover,
 .site-btn:focus {
-  transform: translateY(-2px);
+  transform: none;
 }
 
 .site-btn--ghost {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.55);
   box-shadow: none;
 }
 
 .personal-profile .personal-profile__avatar img {
-  box-shadow: 0 18px 42px rgba(2, 6, 23, 0.45);
+  width: 100%;
+  max-width: 315px;
+  height: 382px;
+  object-fit: cover;
+  background: #ececec;
+  border-radius: 4px;
+  box-shadow: none;
+  margin-top: 10px;
+  position: relative;
+  top: 42px;
 }
 
 .section {
@@ -404,11 +404,11 @@ button:focus {
 
   .personal-profile .personal-profile__content {
     max-width: 100%;
-    padding: 16px 14px;
+    padding: 10px 0 0;
   }
 
   .personal-profile .personal-profile__name {
-    font-size: clamp(1.9rem, 5vw, 2.4rem);
+    font-size: clamp(2.4rem, 7vw, 3.2rem);
     margin-top: 0;
   }
 
@@ -435,7 +435,7 @@ button:focus {
   }
 
   .personal-profile .personal-profile__name {
-    font-size: clamp(1.6rem, 8vw, 2rem);
+    font-size: clamp(2rem, 10vw, 2.5rem);
     line-height: 1.1;
   }
 
