@@ -268,6 +268,15 @@ h6,
   color: #6d28d9;
 }
 
+.project-card--shuletrack {
+  border-left: 5px solid #14b8a6;
+}
+
+.project-card--shuletrack .project-card__label {
+  background: rgba(20, 184, 166, 0.14);
+  color: #0f766e;
+}
+
 .tags li {
   border-radius: 999px;
   border: 1px solid #e2e8f0;
