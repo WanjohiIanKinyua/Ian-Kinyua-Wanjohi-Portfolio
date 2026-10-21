@@ -17,6 +17,7 @@ This portfolio presents Ian as a software engineer focused on building clean, pr
 
 The portfolio currently highlights projects such as:
 
+- Q-Sync Queue Management System
 - Expensely Application
 - Project Management System
 - Bloodbank Management System
