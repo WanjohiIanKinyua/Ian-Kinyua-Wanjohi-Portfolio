@@ -1,58 +1,56 @@
 # Ian Kinyua Wanjohi Portfolio
 
-A personal portfolio website for Ian Kinyua Wanjohi, built to showcase professional background, technical skills, education, and selected software projects.
+A personal portfolio website for Ian Kinyua Wanjohi, software engineer and IT specialist, showcasing professional experience, technical skills, education, certifications and selected software projects.
 
-## Overview
+Live site: https://ian-kinyua-wanjohi-portfolio.vercel.app
 
-This portfolio presents Ian as a software engineer focused on building clean, practical, and user-centered digital products. It includes:
+## Sections
 
-- A hero section with personal profile details
-- A skills section highlighting strengths and capabilities
-- An education timeline
-- A selected projects section
-- A blog section
-- A contact section
+- Hero with profile, contact details and resume download
+- About, languages and strengths
+- Work experience timeline
+- Skills and technologies, grouped by area
+- Selected projects with category filters and live / source links
+- Education and professional certificates
+- Blog
+- Contact
 
 ## Featured Projects
 
-The portfolio currently highlights projects such as:
-
 - Q-Sync Queue Management System
-- Expensely Application
-- Project Management System
-- Bloodbank Management System
-- Online Healthcare Consultation Platform
+- Kenbel Finds
+- Elite Online Hospital
 - ShuleTrack
+- Bloodbank Management System
+- Project Management System
+- Blood Stock Optimization System
+- Green Guard
+- COVID-19 Spread & Capacity Prediction
+- Expensely
 
 ## Built With
 
 - HTML5
-- CSS3
-- JavaScript
-- PHP
+- CSS3 (custom, no framework)
+- Vanilla JavaScript
+- Font Awesome 4.7 and Google Fonts (Sora, Manrope)
 
 ## Project Structure
 
 ```text
 .
 |-- assets/
-|   |-- css/
+|   |-- css/custom.css
 |   |-- img/
-|   `-- js/
-|-- contact.php
+|   `-- js/custom.js
+|-- Ian Kinyua Wanjohi Resume.pdf
 |-- index.html
 `-- README.md
 ```
 
 ## Running Locally
 
-To view the project locally:
-
-1. Place the project inside your web server directory, such as `htdocs` for XAMPP.
-2. Start Apache from XAMPP.
-3. Open the project in your browser.
-
-Example:
+The site is fully static. Open `index.html` in a browser, or serve the folder with any web server (for example, XAMPP's Apache):
 
 ```text
 http://localhost/Iankin%20Portfolio/
@@ -60,8 +58,8 @@ http://localhost/Iankin%20Portfolio/
 
 ## Contact
 
-Ian Kinyua Wanjohi  
-Email: `ianwanjohi20@gmail.com`  
+Ian Kinyua Wanjohi
+Email: `ianwanjohi20@gmail.com`
 Phone: `+254 725 751 322`
 
 ## License
