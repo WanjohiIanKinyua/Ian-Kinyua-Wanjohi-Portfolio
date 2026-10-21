@@ -28,12 +28,21 @@ export interface Feature {
   text: string;
 }
 
+export interface Assignment {
+  title: string;
+  client: string;
+  location: string;
+  period: string;
+  points: string[];
+}
+
 export interface Job {
   title: string;
   company: string;
   period: string;
   mode?: string;
   points: string[];
+  assignments?: Assignment[];
 }
 
 export interface SkillGroup {

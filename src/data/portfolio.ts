@@ -24,10 +24,11 @@ export const profile: Profile = {
 };
 
 export const stats: Stat[] = [
-  { value: "7", label: "Professional roles" },
+  { value: "6", label: "Professional roles" },
   { value: "10+", label: "Projects built" },
   { value: "8", label: "Certifications" },
   { value: "BSc", label: "Information Technology, JKUAT" },
+  { value: "Diploma", label: "Information Technology, JKUAT" },
 ];
 
 export const about: string[] = [
@@ -48,27 +49,29 @@ export const features: Feature[] = [
 
 export const experience: Job[] = [
   {
-    title: "Software Developer · Queue Management System",
-    company: "Golden Africa Djibouti SARL · Djibouti",
-    period: "Aug 2026 – Nov 2026",
-    mode: "On-site",
-    points: [
-      "Developed and implemented Q-Sync, a queue management system for the factory's truck loading operations.",
-      "Digitised the full flow from customer bookings and manager approvals to SAP numbers, QR gate tickets and a live loading queue.",
-      "Built role-based consoles for customers, factory managers, gate security, fleet registrars and administrators.",
-      "Delivered a REST API and an SAP integration API, and supported the system's rollout on-site.",
-    ],
-  },
-  {
     title: "SAP Consultant / Software Developer",
     company: "Gold Vein Solutions",
-    period: "Feb 2026",
+    period: "Feb 2026 – Present",
     mode: "On-site",
     points: [
       "Implemented, customised and troubleshot SAP Business One for clients.",
       "Wrote SQL queries and built Crystal Reports for business reporting.",
       "Developed and integrated business applications with SAP to automate workflows and improve efficiency.",
       "Handled database management, system integration and technical support.",
+    ],
+    assignments: [
+      {
+        title: "Queue Management System",
+        client: "Golden Africa Djibouti SARL",
+        location: "Djibouti",
+        period: "Aug 2026 – Nov 2026",
+        points: [
+          "Developed and implemented Q-Sync, a queue management system for the factory's truck loading operations.",
+          "Digitised the full flow from customer bookings and manager approvals to SAP numbers, QR gate tickets and a live loading queue.",
+          "Built role-based consoles for customers, factory managers, gate security, fleet registrars and administrators.",
+          "Delivered a REST API and an SAP integration API, and supported the system's rollout on-site.",
+        ],
+      },
     ],
   },
   {
@@ -142,7 +145,7 @@ export const projects: Project[] = [
     accent: "indigo",
     featured: true,
     description:
-      "Developed and implemented on-site for Golden Africa Djibouti SARL. Runs the factory's loading flow end to end: customer bookings, manager approvals, SAP numbers, QR gate tickets and a live loading queue through to delivery. Six role-based consoles share one login, backed by a REST API and an SAP integration API.",
+      "Developed and implemented on-site in Djibouti for Golden Africa Djibouti SARL through Gold Vein Solutions. Runs the factory's loading flow end to end: customer bookings, manager approvals, SAP numbers, QR gate tickets and a live loading queue through to delivery. Six role-based consoles share one login, backed by a REST API and an SAP integration API.",
     stack: ["React", "TypeScript", "TanStack Start", "Tailwind CSS", "PostgreSQL (Neon)", "Drizzle ORM"],
     live: "https://qms-web-app.vercel.app/",
   },

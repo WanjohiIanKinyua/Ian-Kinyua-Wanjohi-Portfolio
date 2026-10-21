@@ -1,4 +1,5 @@
 import { experience } from "../data/portfolio";
+import { Icon } from "./Icon";
 import { Reveal } from "./Reveal";
 import { SectionHead } from "./SectionHead";
 
@@ -26,6 +27,25 @@ export function Experience() {
                     <li key={point}>{point}</li>
                   ))}
                 </ul>
+
+                {job.assignments?.map((assignment) => (
+                  <div className="assignment" key={assignment.client}>
+                    <p className="assignment__eyebrow">
+                      <Icon name="fa-map-marker" /> Client assignment · {assignment.location}
+                    </p>
+                    <div className="assignment__head">
+                      <h4>
+                        {assignment.title} <span>for {assignment.client}</span>
+                      </h4>
+                      <span className="assignment__period">{assignment.period}</span>
+                    </div>
+                    <ul>
+                      {assignment.points.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </Reveal>
           ))}

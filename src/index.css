@@ -627,7 +627,7 @@ ol {
 .stats {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   margin-top: 48px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -899,6 +899,55 @@ ol {
   border-radius: 2px;
   background: var(--gold);
   transform: rotate(45deg);
+}
+
+.assignment {
+  margin-top: 18px;
+  padding: 18px 20px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(233, 182, 79, 0.28);
+  border-left: 3px solid var(--gold);
+  background: var(--gold-soft);
+}
+
+.assignment__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-ink);
+}
+
+.assignment__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 16px;
+  margin-bottom: 12px;
+}
+
+.assignment__head h4 {
+  margin: 0;
+  font-family: var(--font-head);
+  font-size: 16px;
+  color: var(--heading);
+}
+
+.assignment__head h4 span {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.assignment__period {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold-text);
 }
 
 /* Skills */
@@ -1532,6 +1581,12 @@ ol {
 
   .stats li:nth-child(n + 3) {
     border-top: 1px solid var(--border);
+  }
+
+  /* An odd last stat spans the full row instead of leaving a gap */
+  .stats li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    border-left: 0;
   }
 
   .about,
