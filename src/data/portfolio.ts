@@ -27,8 +27,8 @@ export const stats: Stat[] = [
   { value: "6", label: "Professional roles" },
   { value: "10+", label: "Projects built" },
   { value: "8", label: "Certifications" },
-  { value: "BSc", label: "Information Technology, JKUAT" },
   { value: "Diploma", label: "Information Technology, JKUAT" },
+  { value: "BSc", label: "Information Technology, JKUAT" },
 ];
 
 export const about: string[] = [
