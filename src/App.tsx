@@ -8,7 +8,6 @@ import { Icon } from "./components/Icon";
 import { Nav } from "./components/Nav";
 import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
-import { Socials } from "./components/Socials";
 import { navLinks, profile } from "./data/portfolio";
 import { useScroll } from "./hooks/useScroll";
 import { useTheme } from "./hooks/useTheme";
@@ -43,7 +42,6 @@ export default function App() {
           <p>
             &copy; {new Date().getFullYear()} {profile.name}. All rights reserved.
           </p>
-          <Socials small />
         </div>
       </footer>
 
