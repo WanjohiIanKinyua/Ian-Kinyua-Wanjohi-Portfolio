@@ -6,7 +6,7 @@ const STORAGE_KEY = "theme";
 
 // The initial theme is applied by an inline script in index.html (before paint) to avoid a flash.
 function readTheme(): Theme {
-  return document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
+  return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
 }
 
 export function useTheme() {

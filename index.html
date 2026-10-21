@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="color-scheme" content="dark light" />
-  <meta name="theme-color" content="#0b0e14" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#f7f5f0" />
   <meta property="og:title" content="Ian Kinyua Wanjohi | Software Engineer & IT Specialist" />
   <meta property="og:description" content="Full-stack software engineer and IT specialist building web platforms, business systems and data-driven products." />
   <meta property="og:image" content="./assets/img/wan.png" />
@@ -20,14 +20,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <!-- Apply the saved theme (light by default) before first paint to avoid a flash -->
   <script>
     (function () {
       var theme = null;
       try { theme = localStorage.getItem("theme"); } catch (e) {}
-      if (theme !== "light" && theme !== "dark") {
-        theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-      }
+      if (theme !== "light" && theme !== "dark") theme = "light";
       document.documentElement.setAttribute("data-theme", theme);
     })();
   </script>

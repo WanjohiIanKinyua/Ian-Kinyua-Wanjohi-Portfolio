@@ -6,7 +6,7 @@ Live site: https://ian-kinyua-wanjohi-portfolio.vercel.app
 
 ## Features
 
-- Light and dark themes (remembers the visitor's choice, defaults to their system setting)
+- Light and dark themes (opens in light mode and remembers the visitor's choice)
 - Mobile-first responsive layout with a full-screen mobile menu
 - Work experience timeline, grouped skills, education and certifications
 - Filterable projects with live-site and source-code links
