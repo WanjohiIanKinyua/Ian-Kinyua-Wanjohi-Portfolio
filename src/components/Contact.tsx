@@ -2,7 +2,16 @@ import { profile } from "../data/portfolio";
 import { Icon } from "./Icon";
 import { Reveal } from "./Reveal";
 
-const contactItems = [
+interface ContactItem {
+  icon: string;
+  label: string;
+  value: string;
+  href?: string;
+  external?: boolean;
+}
+
+const contactItems: ContactItem[] = [
+  { icon: "fa-map-marker", label: "Location", value: profile.location.replace(/^Based in /, "") },
   { icon: "fa-envelope", label: "Email", value: profile.email, href: profile.emailHref, external: true },
   { icon: "fa-phone", label: "Phone", value: profile.phone, href: profile.phoneHref, external: false },
   { icon: "fa-github", label: "GitHub", value: profile.githubHandle, href: profile.github, external: true },
@@ -36,9 +45,13 @@ export function Contact() {
                 </span>
                 <div>
                   <span>{item.label}</span>
-                  <a href={item.href} {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
-                    {item.value}
-                  </a>
+                  {item.href ? (
+                    <a href={item.href} {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
+                      {item.value}
+                    </a>
+                  ) : (
+                    <strong>{item.value}</strong>
+                  )}
                 </div>
               </li>
             ))}

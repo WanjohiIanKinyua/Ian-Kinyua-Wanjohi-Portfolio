@@ -477,29 +477,6 @@ ol {
   margin: 30px 0;
 }
 
-.hero__meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 26px;
-  margin-bottom: 26px;
-  font-size: 15px;
-  color: var(--muted);
-}
-
-.hero__meta li {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.hero__meta i {
-  color: var(--gold-ink);
-}
-
-.hero__meta a:hover {
-  color: var(--heading);
-}
-
 .socials {
   display: flex;
   gap: 12px;
@@ -1398,7 +1375,8 @@ ol {
   color: var(--faint);
 }
 
-.contact__list a {
+.contact__list a,
+.contact__list strong {
   font-weight: 700;
   color: var(--heading);
   word-break: break-word;
@@ -1710,11 +1688,6 @@ ol {
 
   .hero__status {
     margin-bottom: 20px;
-  }
-
-  .hero__meta {
-    flex-direction: column;
-    gap: 10px;
   }
 
   .stats {

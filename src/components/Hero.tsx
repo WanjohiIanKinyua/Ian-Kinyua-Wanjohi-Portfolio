@@ -1,7 +1,6 @@
 import { profile, stats } from "../data/portfolio";
 import { Icon } from "./Icon";
 import { Reveal } from "./Reveal";
-import { Socials } from "./Socials";
 
 export function Hero() {
   return (
@@ -28,23 +27,6 @@ export function Hero() {
               <Icon name="fa-download" /> Download resume
             </a>
           </div>
-
-          <ul className="hero__meta">
-            <li>
-              <Icon name="fa-map-marker" /> {profile.location}
-            </li>
-            <li>
-              <Icon name="fa-envelope-o" />{" "}
-              <a href={profile.emailHref} target="_blank" rel="noopener noreferrer">
-                {profile.email}
-              </a>
-            </li>
-            <li>
-              <Icon name="fa-phone" /> <a href={profile.phoneHref}>{profile.phone}</a>
-            </li>
-          </ul>
-
-          <Socials withEmail />
         </div>
 
         <div className="hero__visual">
