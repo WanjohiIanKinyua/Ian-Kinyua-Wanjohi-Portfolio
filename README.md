@@ -4,57 +4,80 @@ A personal portfolio website for Ian Kinyua Wanjohi, software engineer and IT sp
 
 Live site: https://ian-kinyua-wanjohi-portfolio.vercel.app
 
-## Sections
+## Features
 
-- Hero with profile, contact details and resume download
-- About, languages and strengths
-- Work experience timeline
-- Skills and technologies, grouped by area
-- Selected projects with category filters and live / source links
-- Education and professional certificates
-- Blog
-- Contact
-
-## Featured Projects
-
-- Q-Sync Queue Management System
-- Kenbel Finds
-- Elite Online Hospital
-- ShuleTrack
-- Bloodbank Management System
-- Project Management System
-- Blood Stock Optimization System
-- Green Guard
-- COVID-19 Spread & Capacity Prediction
-- Expensely
+- Light and dark themes (remembers the visitor's choice, defaults to their system setting)
+- Mobile-first responsive layout with a full-screen mobile menu
+- Work experience timeline, grouped skills, education and certifications
+- Filterable projects with live-site and source-code links
+- Resume download
 
 ## Built With
 
-- HTML5
-- CSS3 (custom, no framework)
-- Vanilla JavaScript
+- React 19
+- TypeScript
+- Vite
+- CSS (custom design system with CSS variables, no framework)
 - Font Awesome 4.7 and Google Fonts (Sora, Manrope)
+
+## Updating Content
+
+All text lives in [`src/data/portfolio.ts`](src/data/portfolio.ts): profile details, stats, experience, skills, projects, education, certifications and blog posts. Edit that file and the page updates; no HTML changes needed.
+
+To add a project, append an entry to the `projects` array, for example:
+
+```ts
+{
+  title: "My New Project",
+  label: "Web app",
+  category: "web",          // "web" | "data" | "mobile"
+  accent: "teal",           // card colour
+  description: "What it does and who it's for.",
+  stack: ["React", "TypeScript"],
+  live: "https://example.com",       // optional
+  source: "https://github.com/...",  // optional
+}
+```
+
+Images and the resume PDF live in `public/`.
 
 ## Project Structure
 
 ```text
 .
-|-- assets/
-|   |-- css/custom.css
-|   |-- img/
-|   `-- js/custom.js
-|-- Ian Kinyua Wanjohi Resume.pdf
+|-- public/
+|   |-- assets/img/                 Images
+|   `-- Ian Kinyua Wanjohi Resume.pdf
+|-- src/
+|   |-- components/                 Page sections (Hero, About, Projects, ...)
+|   |-- data/portfolio.ts           All site content
+|   |-- hooks/                      Theme and scroll hooks
+|   |-- types.ts                    Content types
+|   |-- index.css                   Styles
+|   |-- App.tsx
+|   `-- main.tsx
 |-- index.html
-`-- README.md
+|-- vite.config.ts
+|-- vercel.json
+`-- package.json
 ```
 
 ## Running Locally
 
-The site is fully static. Open `index.html` in a browser, or serve the folder with any web server (for example, XAMPP's Apache):
+Requires Node.js 20 or later.
 
-```text
-http://localhost/Iankin%20Portfolio/
+```sh
+npm install
+npm run dev        # development server at http://localhost:5173
+npm run build      # type-check and build to dist/
+npm run preview    # preview the production build
 ```
+
+The build uses relative paths, so `dist/` can also be served from a sub-folder, for example with XAMPP at `http://localhost/Iankin%20Portfolio/dist/` after running `npm run build`.
+
+## Deployment
+
+Vercel builds the site with `npm run build` and serves `dist/` (configured in `vercel.json`).
 
 ## Contact
 

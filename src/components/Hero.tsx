@@ -1,0 +1,85 @@
+import { profile, stats } from "../data/portfolio";
+import { Icon } from "./Icon";
+import { Reveal } from "./Reveal";
+import { Socials } from "./Socials";
+
+export function Hero() {
+  return (
+    <section className="hero" id="top">
+      <div className="hero__glow hero__glow--one" aria-hidden="true" />
+      <div className="hero__glow hero__glow--two" aria-hidden="true" />
+
+      <div className="container hero__grid">
+        <div className="hero__content">
+          <p className="hero__status">
+            <span className="dot" aria-hidden="true" /> Open to new opportunities
+          </p>
+          <h1 className="hero__title">
+            Hi, I'm <span className="text-gold">{profile.name}</span>.
+          </h1>
+          <p className="hero__role">{profile.role}</p>
+          <p className="hero__lead">{profile.lead}</p>
+
+          <div className="hero__actions">
+            <a className="btn btn--gold" href="#projects">
+              View my work <Icon name="fa-arrow-right" />
+            </a>
+            <a className="btn btn--ghost" href={profile.resume} download={profile.resumeDownloadName}>
+              <Icon name="fa-download" /> Download resume
+            </a>
+          </div>
+
+          <ul className="hero__meta">
+            <li>
+              <Icon name="fa-map-marker" /> {profile.location}
+            </li>
+            <li>
+              <Icon name="fa-envelope-o" />{" "}
+              <a href={profile.emailHref} target="_blank" rel="noopener noreferrer">
+                {profile.email}
+              </a>
+            </li>
+            <li>
+              <Icon name="fa-phone" /> <a href={profile.phoneHref}>{profile.phone}</a>
+            </li>
+          </ul>
+
+          <Socials withEmail />
+        </div>
+
+        <div className="hero__visual">
+          <div className="portrait">
+            <div className="portrait__frame">
+              <img src={profile.portrait} alt={`Portrait of ${profile.name}`} width={408} height={612} fetchPriority="high" />
+            </div>
+            <div className="portrait__badge portrait__badge--top">
+              <Icon name="fa-code" />
+              <div>
+                <strong>Full-stack</strong>
+                <span>React · Node · PHP</span>
+              </div>
+            </div>
+            <div className="portrait__badge portrait__badge--bottom">
+              <Icon name="fa-cogs" />
+              <div>
+                <strong>SAP Business One</strong>
+                <span>Consulting &amp; development</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <Reveal as="ul" className="stats">
+          {stats.map((stat) => (
+            <li key={stat.label}>
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </li>
+          ))}
+        </Reveal>
+      </div>
+    </section>
+  );
+}
