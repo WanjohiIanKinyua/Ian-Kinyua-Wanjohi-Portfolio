@@ -23,9 +23,6 @@ export function Hero() {
             <a className="btn btn--gold" href="#projects">
               View my work <Icon name="fa-arrow-right" />
             </a>
-            <a className="btn btn--ghost" href={profile.resume} download={profile.resumeDownloadName}>
-              <Icon name="fa-download" /> Download resume
-            </a>
           </div>
         </div>
 
