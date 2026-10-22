@@ -436,6 +436,10 @@ ol {
   gap: 56px;
 }
 
+.hero__status-icon {
+  color: var(--gold-ink);
+}
+
 .hero__status {
   display: inline-flex;
   align-items: center;

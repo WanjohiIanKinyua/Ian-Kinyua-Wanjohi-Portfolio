@@ -11,7 +11,7 @@ export function Hero() {
       <div className="container hero__grid">
         <div className="hero__content">
           <p className="hero__status">
-            <span className="dot" aria-hidden="true" /> Open to new opportunities
+            <Icon name="fa-code" className="hero__status-icon" /> Welcome to my portfolio
           </p>
           <h1 className="hero__title">
             Hi, I'm <span className="text-gold">{profile.name}</span>.
