@@ -1,5 +1,16 @@
 // All portfolio content lives here. Edit this file to update the site.
-import type { Education, Feature, Job, Post, Profile, Project, ProjectCategory, SkillGroup, Stat } from "../types";
+import type {
+  CertificationGroup,
+  Education,
+  Feature,
+  Job,
+  Post,
+  Profile,
+  Project,
+  ProjectCategory,
+  SkillGroup,
+  Stat,
+} from "../types";
 
 const email = "ianwanjohi20@gmail.com";
 
@@ -26,7 +37,7 @@ export const profile: Profile = {
 export const stats: Stat[] = [
   { value: "6", label: "Professional roles" },
   { value: "10+", label: "Projects built" },
-  { value: "8", label: "Certifications" },
+  { value: "9", label: "Certifications" },
   { value: "Diploma", label: "Information Technology, JKUAT" },
   { value: "BSc", label: "Information Technology, JKUAT" },
 ];
@@ -36,7 +47,7 @@ export const about: string[] = [
   "My work spans full-stack web development, SAP Business One consulting, UI/UX research, SEO and analytics. I enjoy applying technical and analytical skills to real-world challenges, and I keep learning so I can contribute to impactful, tech-driven work.",
 ];
 
-export const languages = ["English", "Kiswahili"];
+export const languages = ["English", "Swahili"];
 
 export const strengths = ["Problem solving", "Leadership", "Works independently", "Communication", "Integrity", "Creativity"];
 
@@ -244,17 +255,21 @@ export const education: Education[] = [
   { degree: "Diploma in Information Technology", school: "Jomo Kenyatta University of Agriculture and Technology", period: "Sep 2020 – Apr 2022" },
 ];
 
-export const certifications = [
-  "Data Science",
-  "Improving Healthcare: The Role of Artificial Intelligence",
-  "Improving Healthcare: The Role of Cloud Computing",
-  "Improving Healthcare: The Role of Data Analytics",
-  "NDG Linux",
-  "Cisco Packet Tracer",
-  "Junior Cybersecurity Analyst",
-  "Network Defense",
+export const certifications: CertificationGroup[] = [
+  {
+    issuer: "IBM",
+    items: [
+      "Certificate in Data Science",
+      "Improving Healthcare: The Role of Artificial Intelligence",
+      "Improving Healthcare: The Role of Cloud Computing",
+      "Improving Healthcare: The Role of Data Analytics",
+    ],
+  },
+  {
+    issuer: "Cisco",
+    items: ["Junior Cybersecurity Analyst", "Computer Security", "Network Defense", "NDG Linux", "Packet Tracer"],
+  },
 ];
-
 export const posts: Post[] = [
   {
     title: "Graphic Design",

@@ -1,41 +1,61 @@
-import { certifications, education } from "../data/portfolio";
+import { certifications, education, languages } from "../data/portfolio";
 import { Icon } from "./Icon";
 import { Reveal } from "./Reveal";
 
 export function Education() {
   return (
     <section className="section" id="education">
-      <div className="container edu">
-        <Reveal>
-          <p className="eyebrow">Education</p>
-          <h2 className="section__title">Academic background</h2>
-          <div className="edu__list">
-            {education.map((item) => (
-              <article className="edu__item" key={item.degree}>
-                <span className="edu__icon">
-                  <Icon name="fa-graduation-cap" />
-                </span>
-                <div>
-                  <h3>{item.degree}</h3>
-                  <p>{item.school}</p>
-                  <span className="edu__date">{item.period}</span>
-                </div>
-              </article>
-            ))}
-          </div>
+      <div className="container">
+        <Reveal className="section__head">
+          <p className="eyebrow">Learning</p>
+          <h2 className="section__title">
+            Learning, <span className="text-gold">certified</span>
+          </h2>
         </Reveal>
 
-        <Reveal>
-          <p className="eyebrow">Certifications</p>
-          <h2 className="section__title">Professional certificates</h2>
-          <ul className="certs">
-            {certifications.map((cert) => (
-              <li key={cert}>
-                <Icon name="fa-certificate" /> {cert}
-              </li>
+        <div className="learn">
+          <Reveal>
+            <h3 className="learn__label">
+              <Icon name="fa-graduation-cap" /> Education
+            </h3>
+            <ol className="edu-timeline">
+              {education.map((item) => (
+                <li key={item.degree}>
+                  <p className="edu-timeline__date">{item.period}</p>
+                  <h3>{item.degree}</h3>
+                  <p className="edu-timeline__school">{item.school}</p>
+                </li>
+              ))}
+            </ol>
+
+            <div className="learn__langs">
+              <h3 className="learn__label">
+                <Icon name="fa-globe" /> Languages
+              </h3>
+              <ul className="chips">
+                {languages.map((language) => (
+                  <li key={language}>{language}</li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+
+          <Reveal>
+            <h3 className="learn__label">
+              <Icon name="fa-check" /> Training &amp; certificates
+            </h3>
+            {certifications.map((group) => (
+              <div className="cert-group" key={group.issuer}>
+                <p className="cert-group__issuer">{group.issuer}</p>
+                <ul>
+                  {group.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
-        </Reveal>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

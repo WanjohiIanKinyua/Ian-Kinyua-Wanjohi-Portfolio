@@ -83,6 +83,11 @@ export interface Education {
   period: string;
 }
 
+export interface CertificationGroup {
+  issuer: string;
+  items: string[];
+}
+
 export interface Post {
   title: string;
   date: string;

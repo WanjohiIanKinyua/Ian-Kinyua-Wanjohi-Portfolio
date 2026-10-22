@@ -1,4 +1,4 @@
-import { about, features, languages, strengths } from "../data/portfolio";
+import { about, features, strengths } from "../data/portfolio";
 import { Icon } from "./Icon";
 import { Reveal } from "./Reveal";
 
@@ -14,14 +14,6 @@ export function About() {
           ))}
 
           <div className="about__extras">
-            <div>
-              <h3 className="mini-title">Languages</h3>
-              <ul className="chips">
-                {languages.map((language) => (
-                  <li key={language}>{language}</li>
-                ))}
-              </ul>
-            </div>
             <div>
               <h3 className="mini-title">Strengths</h3>
               <ul className="chips">
