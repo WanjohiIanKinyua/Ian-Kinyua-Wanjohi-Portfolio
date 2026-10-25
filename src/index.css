@@ -1226,6 +1226,17 @@ ol {
   color: var(--muted);
 }
 
+.edu-timeline__honours {
+  display: inline-block;
+  margin: 10px 0 0;
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: var(--gold-soft);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold-text);
+}
+
 /* Certificates grouped by issuer */
 .cert-group {
   display: grid;

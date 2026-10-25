@@ -47,7 +47,7 @@ Images and the resume PDF live in `public/`.
 .
 |-- public/
 |   |-- assets/img/                 Images
-|   `-- Ian Kinyua Wanjohi Resume.pdf
+|   `-- Ian_Kinyua_Wanjohi_Resume.pdf
 |-- src/
 |   |-- components/                 Page sections (Hero, About, Projects, ...)
 |   |-- data/portfolio.ts           All site content

@@ -24,6 +24,7 @@ export function Education() {
                   <p className="edu-timeline__date">{item.period}</p>
                   <h3>{item.degree}</h3>
                   <p className="edu-timeline__school">{item.school}</p>
+                  {item.honours && <p className="edu-timeline__honours">{item.honours}</p>}
                 </li>
               ))}
             </ol>

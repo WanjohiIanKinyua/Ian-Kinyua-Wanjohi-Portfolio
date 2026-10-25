@@ -81,6 +81,7 @@ export interface Education {
   degree: string;
   school: string;
   period: string;
+  honours?: string;
 }
 
 export interface CertificationGroup {

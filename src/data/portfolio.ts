@@ -17,7 +17,7 @@ const email = "ianwanjohi20@gmail.com";
 export const profile: Profile = {
   name: "Ian Kinyua Wanjohi",
   shortName: "Ian Kinyua",
-  role: "Software Engineer & IT Specialist",
+  role: "Software Developer & IT Specialist",
   lead:
     "I build full-stack web platforms, business systems and data-driven tools that solve real problems — from factory queue management and e-commerce to telemedicine and SAP Business One solutions.",
   location: "Based in Kenya",
@@ -28,7 +28,7 @@ export const profile: Profile = {
   github: "https://github.com/WanjohiIanKinyua",
   githubHandle: "WanjohiIanKinyua",
   linkedin: "https://www.linkedin.com/in/ian-kinyua-7b421721b/",
-  resume: "./Ian Kinyua Wanjohi Resume.pdf",
+  resume: "./Ian_Kinyua_Wanjohi_Resume.pdf",
   resumeDownloadName: "Ian-Kinyua-Resume.pdf",
   portrait: "./assets/img/wan.png",
   logo: "./assets/img/iankin.png",
@@ -61,7 +61,7 @@ export const features: Feature[] = [
 export const experience: Job[] = [
   {
     title: "SAP Consultant / Software Developer",
-    company: "Gold Vein Solutions",
+    company: "GoldVein Solutions Ltd",
     period: "Feb 2026 – Present",
     mode: "On-site",
     points: [
@@ -135,7 +135,7 @@ export const skills: SkillGroup[] = [
   { icon: "fa-server", title: "Back-end", items: ["Node.js", "Express", "PHP", "Laravel", "Python", "Django", "Flask", "Java"] },
   { icon: "fa-exchange", title: "APIs & integration", items: ["REST APIs", "FastAPI", "Python requests", "Fetch", "Axios", "JWT auth"] },
   { icon: "fa-database", title: "Databases", items: ["MySQL", "PostgreSQL", "Neon", "SQLite", "SQL", "Drizzle ORM"] },
-  { icon: "fa-bar-chart", title: "Data & machine learning", items: ["Pandas", "Matplotlib", "Seaborn", "PySpark", "MLlib", "Random Forest"] },
+  { icon: "fa-bar-chart", title: "Data & machine learning", items: ["Power BI", "Pandas", "Matplotlib", "Seaborn", "PySpark", "MLlib", "Random Forest"] },
   { icon: "fa-cubes", title: "Business systems", items: ["SAP Business One", "Crystal Reports", "Microsoft Dynamics NAV"] },
   { icon: "fa-bullhorn", title: "Marketing & analytics", items: ["SEO", "GA4", "Google Tag Manager", "Meta Pixel", "Google Ads", "Brevo", "Klaviyo"] },
   { icon: "fa-sitemap", title: "IT, cloud & hosting", items: ["Troubleshooting", "Software setup", "Network setup", "IT user support", "Linux", "Vercel", "Hostinger"] },
@@ -156,7 +156,7 @@ export const projects: Project[] = [
     accent: "indigo",
     featured: true,
     description:
-      "Developed and implemented on-site in Djibouti for Golden Africa Djibouti SARL through Gold Vein Solutions. Runs the factory's loading flow end to end: customer bookings, manager approvals, SAP numbers, QR gate tickets and a live loading queue through to delivery. Six role-based consoles share one login, backed by a REST API and an SAP integration API.",
+      "Developed and implemented on-site in Djibouti for Golden Africa Djibouti SARL through GoldVein Solutions. Runs the factory's loading flow end to end: customer bookings, manager approvals, SAP numbers, QR gate tickets and a live loading queue through to delivery. Six role-based consoles share one login, backed by a REST API and an SAP integration API.",
     stack: ["React", "TypeScript", "TanStack Start", "Tailwind CSS", "PostgreSQL (Neon)", "Drizzle ORM"],
     live: "https://qms-web-app.vercel.app/",
   },
@@ -251,8 +251,18 @@ export const projects: Project[] = [
 ];
 
 export const education: Education[] = [
-  { degree: "BSc Information Technology", school: "Jomo Kenyatta University of Agriculture and Technology", period: "Sep 2022 – May 2025" },
-  { degree: "Diploma in Information Technology", school: "Jomo Kenyatta University of Agriculture and Technology", period: "Sep 2020 – Apr 2022" },
+  {
+    degree: "BSc Information Technology",
+    school: "Jomo Kenyatta University of Agriculture and Technology",
+    period: "Sep 2022 – May 2025",
+    honours: "Second Class Honours (Upper Division)",
+  },
+  {
+    degree: "Diploma in Information Technology",
+    school: "Jomo Kenyatta University of Agriculture and Technology",
+    period: "Sep 2020 – Apr 2022",
+    honours: "Distinction",
+  },
 ];
 
 export const certifications: CertificationGroup[] = [
